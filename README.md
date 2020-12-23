@@ -5,7 +5,9 @@ Wishlist API is a REST API implemented in Nodejs that provides endpoints to mana
 ## Dependecies
 
  . Nodejs v12.16.0 [https://nodejs.org/en/]()
+ 
  . NVM [https://github.com/creationix/nvm#install-script]()
+ 
  . Docker Compose [https://docs.docker.com/compose/install/#install-compose]()
 
 Após instalado
