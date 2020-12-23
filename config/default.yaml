@@ -1,0 +1,14 @@
+app:
+  port: 3000
+  level: DEBUG
+
+mongo:
+  mongoUri: "mongodb://localhost:27017/wishlist"
+
+product:
+  host: "https://challenge-api.luizalabs.com/"
+  timeout: 5000
+
+swagger:
+    host: "localhost:3000"
+    scheme: "http"

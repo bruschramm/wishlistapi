@@ -1,0 +1,55 @@
+{
+  "name": "wishlist",
+  "version": "1.0.0",
+  "description": "Wishlist API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "find ./ -name '*spec.js' | grep -v node_modules | xargs ./node_modules/mocha/bin/mocha -R spec",
+    "coverage": "./node_modules/nyc/bin/nyc.js --check-coverage true --lines 90 --reporter=lcov --reporter=text --report-dir ./coverage npm test",
+    "lint": "eslint ./src ./*.js",
+    "prettier": "prettier ./.prettierrc.json ./src/**/*.js --write \"./src/**/*.js\""
+  },
+  "author": "Bruna Afonso Schramm",
+  "license": "ISC",
+  "nyc": {
+    "include": "src",
+    "exclude": [
+      "**/index.js",
+      "**/server.js",
+      "**/*.spec.js",
+      "src/commons/exceptions/*",
+      "src/repositories/*",
+      "src/commons/MongoConnection.js",
+      "src/commons/logger.js"
+    ],
+    "all": true
+  },
+  "dependencies": {
+    "@hapi/basic": "^6.0.0",
+    "@hapi/hapi": "^19.2.0",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.0.1",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "boom": "^7.3.0",
+    "config": "^3.3.3",
+    "fs": "0.0.1-security",
+    "hapi-swagger": "^14.0.0",
+    "joi": "^17.3.0",
+    "js-yaml": "^3.14.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.8",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "sinon": "^9.2.2"
+  }
+}
